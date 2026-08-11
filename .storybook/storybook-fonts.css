@@ -1,0 +1,53 @@
+/* Load fonts for Storybook (since next/font/local doesn't work in Storybook) */
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/gotham/Gotham-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/gotham/Gotham-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/gotham/GOTHAM-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maragsa Display';
+  src: url('/fonts/maragsa/Maragsa-Display.woff2') format('woff2'),
+       url('/fonts/maragsa/Maragsa-Display.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-gotham: 'Gotham', system-ui, sans-serif;
+  --font-maragsa: 'Maragsa Display', Georgia, serif;
+}
+
+body {
+  font-family: var(--font-gotham);
+}
+
+/* Ensure serif class uses Maragsa Display */
+.font-serif {
+  font-family: var(--font-maragsa);
+}
+
+/* Ensure sans class uses Gotham */
+.font-sans {
+  font-family: var(--font-gotham);
+}
